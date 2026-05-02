@@ -40,3 +40,11 @@ def toggle_task(task_id: int, db: Session = Depends(get_db)):
     db.refresh(task)
 
     return task
+
+import os
+import uvicorn
+
+if __name__ == "__main__":
+    # Render PORT ortam değişkenini otomatik atar, yoksa 8000 kullanılır.
+    port = int(os.environ.get("PORT", 8000))
+    uvicorn.run("main:app", host="0.0.0.0", port=port, reload=False)

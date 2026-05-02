@@ -3,4 +3,4 @@ uvicorn
 sqlalchemy
 psycopg2-binary
 pydantic
-python-dotenv  <-- Bunu da eklemeni öneririm (Gizli bilgileri yönetmek için)
+python-dotenv
